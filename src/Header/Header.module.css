@@ -1,0 +1,116 @@
+.Logo {
+	width: 80px;
+	height: 80px;
+}
+
+.Logo:hover {
+	cursor: pointer;
+}
+
+.HeaderCont {
+	font-family: 'Lexend', sans-serif;
+	user-select: none;
+	padding: 0 10%;
+	width: 80vw;
+	height: 6rem;
+	background-color: #0e0d17;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 5px 5rem #2c2a4a;
+	position: sticky;
+}
+
+.NavPanel {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 40%;
+}
+
+.Link {
+	color: white;
+	text-decoration: none;
+	font-size: large;
+	transition: .3s;
+}
+
+.Link:hover {
+	cursor: pointer;
+	color: #e43256;
+}
+
+.ContactBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-decoration: none;
+	font-size: large;
+	font-weight: bold;
+	width: 9rem;
+	height: 3rem;
+	border: 3px solid #451fc2;
+	border-radius: 50px;
+	transition: .3s;
+}
+
+.ContactBtn:hover {
+	background-color: #451fc2;
+}
+
+
+.LinkActive {
+	color: #e43256;
+}
+
+.MenuBtn {
+	transform: scale(1.5);
+	display: none;
+}
+
+.MenuBtn:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 800px) {
+	.MenuBtn {
+		display: flex;
+	}
+
+	.NavPanel {
+		display: none;
+	}
+}
+
+.MenuCont {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #0e0d17;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Xmark {
+	position: absolute;
+	top: 2rem;
+	transition: .3s;
+}
+
+.Xmark:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.MenuNavPanel {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 35%;
+}
