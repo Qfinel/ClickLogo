@@ -1,0 +1,64 @@
+.HomeCont {
+    height: 100vh;
+    width: 100%;
+    background-color: #0e0d17;
+    font-family: 'Lexend', sans-serif;
+}
+
+.Section {
+    width: 80%;
+    margin-top: 6%;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TextSection {
+    width: 40%;
+}
+
+.TextSection h1 {
+    color: white;
+    font-size: 3rem;
+    user-select: none;
+}
+
+.TextSection p {
+    color: #7c90b3;
+    font-size: large;
+    width: 85%;
+    margin-bottom: 10%;
+}
+
+.ContactBtn {
+	display: flex;
+    user-select: none;
+	align-items: center;
+	justify-content: space-evenly;
+	color: white;
+	text-decoration: none;
+	font-size: large;
+	font-weight: bold;
+	width: 11rem;
+	height: 3rem;
+    background-color: #451fc2;
+	border: 3px solid #451fc2;
+	border-radius: 50px;
+	transition: .3s;
+}
+
+.ContactBtn:hover {
+	background-color: transparent;
+}
+
+.sect {
+    display: flex;
+    align-items: center;
+}
+
+.pic {
+    width: 40%;
+    height: 40%;
+    user-select: none;
+}
