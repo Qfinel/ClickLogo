@@ -1,14 +1,16 @@
 .HomeCont {
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    height: 100%;
     width: 100%;
     background-color: #0e0d17;
     font-family: 'Lexend', sans-serif;
 }
 
 .Section {
-    width: 80%;
-    margin-top: 6%;
-    padding: 0 10%;
+    width: 70%;
+    margin-top: 12%;
+    padding: 0 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,8 +21,10 @@
 }
 
 .TextSection h1 {
+    margin-top: 0;
+    margin-bottom: 3rem;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     user-select: none;
 }
 
@@ -58,7 +62,6 @@
 }
 
 .pic {
-    width: 40%;
-    height: 40%;
-    user-select: none;
+    width: 50%;
+    height: 50%;
 }

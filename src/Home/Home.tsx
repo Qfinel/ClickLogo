@@ -23,7 +23,7 @@ const Home = () => {
 					<FontAwesomeIcon icon={faArrowRight} />
 				</Link>
 			</section>
-				<img src={pic} className={styles.pic} alt=""/>
+					<img src={pic} className={styles.pic} alt=""/>
 			</section>
 			<Footer />
 		</div>

@@ -10,15 +10,16 @@
 .HeaderCont {
 	font-family: 'Lexend', sans-serif;
 	user-select: none;
-	padding: 0 10%;
-	width: 80%;
+	padding: 0 15%;
+	top: 0;
+	width: 70%;
 	height: 6rem;
 	background-color: #0e0d17;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	box-shadow: 0 5px 5rem #2c2a4a;
-	position: sticky;
+	position: fixed;
 }
 
 .NavPanel {
