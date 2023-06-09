@@ -1,10 +1,11 @@
 .HomeCont {
     position: absolute;
     top: 0;
-    height: 100%;
+    height: 500%;
     width: 100%;
     background-color: #0e0d17;
     font-family: 'Lexend', sans-serif;
+    color: white;
 }
 
 .Section {
@@ -23,7 +24,6 @@
 .TextSection h1 {
     margin-top: 0;
     margin-bottom: 3rem;
-    color: white;
     font-size: 4rem;
     user-select: none;
 }
@@ -64,4 +64,160 @@
 .pic {
     width: 50%;
     height: 50%;
+    box-shadow: 3em 3em #e43256;
+}
+
+.ServiceSection {
+    width: 70%;
+    margin-top: 12%;
+    padding: 0 15%;
+}
+
+.ServiceSection h1 {
+    margin-top: 0;
+    font-size: 3rem;
+    user-select: none;
+    box-shadow: -0.3em 0 #e43256;
+}
+
+.ServiceSection section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ServiceCard {
+    width: 32%;
+    height: 10rem;
+    margin-top: 2em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0.4em 0.4em #e4325668;
+    transition: .3s;
+}
+
+.ServiceCard p {
+    transition: .3s;
+}
+
+.ServiceCard:hover {
+    cursor: pointer;
+    justify-content: center;
+    box-shadow: 0.4em 0.4em #e43256;
+}
+
+.ServiceCard:hover p {
+    transform: translateX(-2em);
+    font-weight: bold;
+}
+
+.Wordmark {
+    background-image: url('../assets/Wordmark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Wordmark:hover {
+    background-color: rgba(0, 0, 0, 0.611);
+}
+
+.Letterform {
+    background-image: url('../assets/Letterform.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Letterform:hover {
+    background-color: rgba(0, 0, 0, 0.611);
+}
+
+.Lettermark {
+    background-image: url('../assets/Lettermark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Lettermark:hover {
+    background-color: rgba(0, 0, 0, 0.611);
+}
+
+.LogoSymb {
+    background-image: url('../assets/LogoSymb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.LogoSymb:hover {
+    background-color: rgba(0, 0, 0, 0.611);
+}
+
+
+.AbstractLogo {
+    background-image: url('../assets/AbstractLogo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.AbstractLogo:hover {
+    background-color: rgba(0, 0, 0, 0.611);
+}
+
+
+.Mascot {
+    background-image: url('../assets/Mascot.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Mascot:hover {
+    background-color: rgba(0, 0, 0, 0.611);
+}
+
+
+.scrollBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    background-color: #7c90b3;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: .3s;
+}
+
+.scrollBtn:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.invisible:hover {
+    cursor: auto;
 }
