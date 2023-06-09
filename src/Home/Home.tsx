@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import pic from '../assets/Man.jpg'
+import pic2 from '../assets/Woman.jpeg'
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -14,10 +15,11 @@ const Home = () => {
 	const navigate = useNavigate();
 
 	const [isVisible, setIsVisible] = useState(false);
+	const [scrollTop, setScrollTop] = useState(document.documentElement.scrollTop)
 
 	const handleScroll = () => {
-		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		setIsVisible(scrollTop > 100); // Show the button when scrolled 100 pixels down
+		setScrollTop(window.pageYOffset || document.documentElement.scrollTop);
+		setIsVisible(scrollTop > 200);
 	};
 
 	const scrollToTop = () => {
@@ -32,7 +34,7 @@ const Home = () => {
 		return () => {
 		window.removeEventListener('scroll', handleScroll);
 		};
-	}, []);
+	});
 
 	return (
 		<div className={styles.HomeCont}>
@@ -63,6 +65,34 @@ const Home = () => {
 					<div className={`${styles.ServiceCard} ${styles.Mascot}`} onClick={() => {navigate('/services')}}><p>Mascots</p></div>
 				</section>
 			</section>
+				<section className={styles.QualitiesSection}>
+					<section>
+						<h1>Experienced <span style={{color: '#451fc2'}}>qualities</span></h1>
+						<div className={styles.SkillCont}>
+							<p>Design</p>
+							<div className={styles.NotFilledBar}>
+								{scrollTop > 1100 && <div className={styles.SkillBar} />}
+							</div>
+							<p>Communication</p>
+							<div className={styles.NotFilledBar}>
+								{scrollTop > 1150 && <div className={styles.SkillBar} />}
+							</div>
+							<p>Passion</p>
+							<div className={styles.NotFilledBar}>
+								{scrollTop > 1200 && <div className={styles.SkillBar} />}
+							</div>
+							<p>Speed</p>
+							<div className={styles.NotFilledBar}>
+								{scrollTop > 1250 && <div className={styles.SkillBar} />}
+							</div>
+							<p>Quality</p>
+							<div className={styles.NotFilledBar}>
+								{scrollTop > 1300 && <div className={styles.SkillBar} />}
+							</div>
+						</div>
+					</section>
+						<img src={pic2} alt="Logo designer"></img>
+				</section>
 			<Footer />
 			<button
 				className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}

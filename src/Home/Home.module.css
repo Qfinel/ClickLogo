@@ -19,6 +19,7 @@
 
 .TextSection {
     width: 40%;
+    animation: TextAnimation 2s;
 }
 
 .TextSection h1 {
@@ -32,7 +33,7 @@
     color: #7c90b3;
     font-size: large;
     width: 85%;
-    margin-bottom: 10%;
+    margin-bottom: 12%;
 }
 
 .ContactBtn {
@@ -65,11 +66,12 @@
     width: 50%;
     height: 50%;
     box-shadow: 3em 3em #e43256;
+    animation: PicAnimation 2s;
 }
 
 .ServiceSection {
     width: 70%;
-    margin-top: 12%;
+    margin-top: 15%;
     padding: 0 15%;
 }
 
@@ -220,4 +222,88 @@
 
 .invisible:hover {
     cursor: auto;
+}
+
+.QualitiesSection {
+    width: 70%;
+    margin-top: 15%;
+    padding: 0 15%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    height: 12%;
+    background-color: #7c90b310;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.QualitiesSection h1 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 3rem;
+    user-select: none;
+    box-shadow: -0.3em 0 #451fc2;
+}
+
+.QualitiesSection p {
+    width: 40%;
+}
+
+.QualitiesSection img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: -2em 2em #451fc2;
+    user-select: none;
+}
+
+.SkillCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 17rem;
+}
+
+.NotFilledBar {
+    width: 95%;
+    height: 15px;
+    background-color: white
+}
+
+.SkillBar {
+    width: 100%;
+    height: 100%;
+    background-color: #451fc2;
+    animation: loadingAnimation 1.5s;
+}
+
+@keyframes loadingAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+}
+
+@keyframes PicAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 100;
+        transform: translateX(0);
+    }
+}
+
+@keyframes TextAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 100;
+        transform: translateX(0);
+    }
 }
