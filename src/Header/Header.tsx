@@ -30,6 +30,7 @@ const Header = () => {
 			<nav className={styles.NavPanel}>
 				<Link to="/" style={location.pathname === '/' ? linkStyle : undefined} className={styles.Link}>Home</Link>
 				<Link to="/services" style={location.pathname === '/services' ? linkStyle : undefined} className={styles.Link}>Services</Link>
+				<Link to="/portfolio" style={location.pathname === '/portfolio' ? linkStyle : undefined} className={styles.Link}>Portfolio</Link>
 				<Link to="/about" style={location.pathname === '/about' ? linkStyle : undefined} className={styles.Link}>About</Link>
 				<Link to="/contact-us" style={location.pathname === '/contact-us' ? btnStyle : undefined} className={styles.ContactBtn}>Contact Us</Link>
 			</nav>
@@ -42,6 +43,7 @@ const Header = () => {
 					<nav className={styles.MenuNavPanel}>
 						<Link to="/" style={location.pathname === '/' ? linkStyle : undefined} className={styles.Link}>Home</Link>
 						<Link to="/services" style={location.pathname === '/services' ? linkStyle : undefined} className={styles.Link}>Services</Link>
+						<Link to="/portfolio" style={location.pathname === '/portfolio' ? linkStyle : undefined} className={styles.Link}>Portfolio</Link>
 						<Link to="/about" style={location.pathname === '/about' ? linkStyle : undefined} className={styles.Link}>About</Link>
 						<Link to="/contact-us" style={location.pathname === '/contact-us' ? btnStyle : undefined} className={styles.ContactBtn}>Contact Us</Link>
 					</nav>

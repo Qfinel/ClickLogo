@@ -230,7 +230,7 @@
     padding: 0 15%;
     padding-top: 3%;
     padding-bottom: 4%;
-    height: 12%;
+    height: 13%;
     background-color: #7c90b310;
     display: flex;
     justify-content: space-between;
@@ -247,6 +247,14 @@
 
 .QualitiesSection p {
     width: 40%;
+}
+
+.QualitiesSection section {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .QualitiesSection img {
