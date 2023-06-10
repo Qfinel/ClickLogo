@@ -1,0 +1,41 @@
+.QualitiesSection {
+    width: 70%;
+    margin-top: 15%;
+    padding: 0 15%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    height: 13%;
+    background-color: #7c90b310;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.QualitiesSection h1 {
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 3rem;
+    user-select: none;
+    box-shadow: -0.3em 0 #451fc2;
+}
+
+.QualitiesSection img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: -2em 2em #451fc2;
+    transform: translateY(-18%);
+    user-select: none;
+}
+
+.QualitiesSection p {
+    color: #7c90b3;
+    font-size: large;
+    width: 38%;
+    padding-left: 4%;
+    margin-bottom: 12%;
+    line-height: 1.5em;
+    text-align: end;
+}
