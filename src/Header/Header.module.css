@@ -37,6 +37,7 @@
 	transition: .3s;
 	border: 0;
 	background-color: transparent;
+	font-family: 'Lexend', sans-serif;
 }
 
 .Link:hover {
@@ -46,6 +47,7 @@
 
 .ContactBtn {
 	border: 0;
+	font-family: 'Lexend', sans-serif;
 	background-color: transparent;
 	display: flex;
 	align-items: center;

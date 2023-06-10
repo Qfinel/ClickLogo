@@ -1,0 +1,121 @@
+.PaymentsSection {
+    width: 70%;
+    padding: 0 15%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background-color: #7c90b310;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.PaymentsSection h1 {
+	margin-top: 0;
+    margin-bottom: 2em;
+    font-size: 3rem;
+    user-select: none;
+	box-shadow: 0 0.2em #e43256;
+}
+
+.PaymentsSection section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.PlanCard {
+	background-color: #0e0d17;
+	width: 28%;
+	height: 400px;
+	padding: 50px 0;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: -2em 2em #0e0d174c;
+	transform-style: preserve-3d;
+	transition: .4s ease;
+}
+
+.PlanCard h1 {
+	box-shadow: 0 0;
+	margin: 0;
+	width: 100%;
+	background-color: #e43256;
+	text-align: center;
+}
+
+.PlanCard h3 {
+	margin: 0;
+	font-family: 'Lexend', sans-serif;
+	font-weight: bold;
+	color: #7c90b3;
+	text-align: center;
+	user-select: none;
+	font-size: 1.5em;
+}
+
+.PlanCard p {
+	text-align: center;
+	line-height: 2em;
+	transition: .3s;
+	font-weight: bold;
+	color: #7c90b3;
+}
+
+.PlanCard:hover {
+	box-shadow: 2em 2em #0e0d178f;
+	transform: rotateY(180deg);
+}
+
+.PlanCard:hover p {
+	display: block;
+}
+
+.PlanCardBack {
+	position: absolute;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	/* display: none; */
+}
+
+.PlanCardFront {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	backface-visibility: hidden;
+	/* display: none; */
+}
+
+.PlanCardBack button {
+	font-family: 'Lexend', sans-serif;
+	display: flex;
+	user-select: none;
+	align-items: center;
+	justify-content: space-evenly;
+	color: white;
+	text-decoration: none;
+	font-size: large;
+	font-weight: bold;
+	width: 9.5rem;
+	height: 3rem;
+	background-color: #451fc2;
+	border: 3px solid #451fc2;
+	border-radius: 50px;
+	transition: .3s;
+}
+	
+.PlanCardBack button:hover {
+	background-color: transparent;
+	cursor: pointer;
+}

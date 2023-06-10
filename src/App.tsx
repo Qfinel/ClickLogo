@@ -8,6 +8,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import About from './About/About';
 import Portfolio from './Portfolio/Portfolio';
+import Payments from './Payments/Payments';
 
 function App() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -33,19 +34,20 @@ function App() {
 	});
 
   return (
-    <div className={styles.HomeCont}>
+	<>
       <Header />
         <Home />
         <Services />
         <About />
 		<Portfolio />
+		<Payments />
       <Footer />
       <button
 				className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}
 				onClick={scrollToTop}>
 				<FontAwesomeIcon icon={faArrowUp} color="#0e0d17"/>
 			</button>
-		</div>
+	</>
   );
 }
 

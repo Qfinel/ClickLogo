@@ -6,7 +6,7 @@ const About = () => {
 	return (
 		<>
 		<section className={styles.QualitiesSection}>
-			<h1>About us</h1>
+			<h1>About <span style={{color: '#451fc2'}}>us</span></h1>
 			<p>
 				Over the years, we have worked with Fortune 500s 
 				and brand-new startups. We help ambitious businesses 

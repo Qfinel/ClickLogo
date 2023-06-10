@@ -11,6 +11,7 @@ import styles from './Portfolio.module.css'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
 
 const Portfolio = () => {
 
@@ -20,7 +21,7 @@ const Portfolio = () => {
 	},
 	{
 		image: pic2,
-		company: 'Google'
+		company: 'ClickLogo'
 	},
 	{
 		image: pic3,
@@ -40,7 +41,7 @@ const Portfolio = () => {
 	},
 	{
 		image: pic7,
-		company: 'ClickLogo'
+		company: 'Google'
 	},
 	{
 		image: pic8,
@@ -69,6 +70,7 @@ const Portfolio = () => {
 	}
 
 	return (
+		<>
 		<section className={styles.PortfolioSection}>
 			<h1>Our <span style={{color: '#e43256'}}>distinctive</span> portfolio</h1>
 			<div className={styles.PortfolioBook}>
@@ -83,7 +85,7 @@ const Portfolio = () => {
 					style={{backgroundImage: `url(${slide.image})`,}}
 					onClick={() => {rotateArray(index - 2)}}
 				>
-					<p>A logo for</p>
+					<p>Logo for</p>
 					<p style={{fontWeight: 'bold'}}>{slide.company}</p>
 				</div>
 				);
@@ -91,6 +93,25 @@ const Portfolio = () => {
 			<FontAwesomeIcon className={styles.Arrow} size="3x" onClick={() => {rotateArray(+1)}} icon={faArrowRight}/>
 			</div>
 		</section>
+		<section className={styles.ProsSection}>
+			<div>
+				<FontAwesomeIcon icon={faCircleCheck} size='2x' color='#451fc2'/>
+				<p>Free consultation and brief preparation</p>
+			</div>
+			<div>
+				<FontAwesomeIcon icon={faCircleCheck} size='2x' color='#451fc2' />
+				<p>Personal offers and discounts for clients</p>
+			</div>
+			<div>
+				<FontAwesomeIcon icon={faCircleCheck} size='2x' color='#451fc2'/>
+				<p>We always complete the work on time</p>
+			</div>
+			<div>
+				<FontAwesomeIcon icon={faCircleCheck} size='2x' color='#451fc2' />
+				<p>We employ only highly qualified specialists</p>
+			</div>
+		</section>
+		</>
 	);
 }
 

@@ -52,10 +52,10 @@ const Header = () => {
 					onClick={() => scrollTo(1480)}>
 						About
 				</button>
-				<button style={(scrollTop >= 2000 && scrollTop < 2400) ? linkStyle : undefined}
+				<button style={(scrollTop >= 2500 && scrollTop < 3000) ? linkStyle : undefined}
 					className={styles.Link}
-					onClick={() => scrollTo(2380)}>
-						Portfolio
+					onClick={() => scrollTo(3200)}>
+						Pricing
 				</button>
 				<button className={styles.ContactBtn} onClick={() => scrollTo(2400)}>Contact Us</button>
 			</nav>
@@ -81,10 +81,10 @@ const Header = () => {
 							onClick={() => scrollTo(1480)}>
 								About
 						</button>
-						<button style={(scrollTop >= 2000 && scrollTop < 2400) ? linkStyle : undefined}
+						<button style={(scrollTop >= 2500 && scrollTop < 3000) ? linkStyle : undefined}
 							className={styles.Link}
-							onClick={() => scrollTo(2380)}>
-								Portfolio
+							onClick={() => scrollTo(3200)}>
+								Pricing
 						</button>
 						<button className={styles.ContactBtn} onClick={() => scrollTo(2400)}>Contact Us</button>
 					</nav>

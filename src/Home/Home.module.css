@@ -28,6 +28,7 @@
 }
 
 .ContactBtn {
+    font-family: 'Lexend', sans-serif;
 	display: flex;
     user-select: none;
 	align-items: center;

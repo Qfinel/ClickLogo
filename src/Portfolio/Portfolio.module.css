@@ -2,14 +2,13 @@
     width: 70%;
     padding: 0 15%;
     padding-top: 4%;
-    padding-bottom: 4%;
-    height: 16%;
+    padding-bottom: 8%;
+    height: 15%;
     background-color: #7c90b310;
 }
 
 .PortfolioSection h1 {
-	margin-top: 1em;
-	margin-bottom: 2em;
+	margin-bottom: 1.8em;
     width: 100%;
     font-size: 3rem;
     user-select: none;
@@ -48,6 +47,10 @@
 	transition: .3s;
 }
 
+.Slide:hover {
+	box-shadow: -1em 1em #e43256;
+}
+
 .ActiveSlide {
 	width: 300px;
 	height: 400px;
@@ -66,10 +69,33 @@
 
 .ActiveSlide:hover {
     background-color: rgba(0, 0, 0, 0.608);
+	box-shadow: -1.5em 1.5em #e43256;
 }
 
 .ActiveSlide:hover p {
 	opacity: 100;
 	transform: translateY(0);
 
+}
+
+.ProsSection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 70%;
+    padding: 0 15%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    height: 5%;
+}
+
+.ProsSection div {
+	display: flex;
+	align-items: center;
+	width: 40%;
+}
+
+.ProsSection div p {
+	margin-left: 1.3em;
+	font-size: 1.3em;
 }
