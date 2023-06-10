@@ -2,7 +2,7 @@
     width: 70%;
     margin-top: 15%;
     padding: 0 15%;
-    padding-top: 3%;
+    padding-top: 4%;
     padding-bottom: 4%;
     height: 13%;
     background-color: #7c90b310;
@@ -33,9 +33,35 @@
 .QualitiesSection p {
     color: #7c90b3;
     font-size: large;
-    width: 38%;
+    width: 36%;
     padding-left: 4%;
-    margin-bottom: 12%;
+    margin-bottom: 10%;
     line-height: 1.5em;
     text-align: end;
+}
+
+.StatsSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.StatsSection div {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.StatsSection div h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-right: 0.2em;
+    color: #e43256;
+    
+}
+
+.StatsSection div p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
 }

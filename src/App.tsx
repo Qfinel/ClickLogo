@@ -7,6 +7,7 @@ import styles from './App.module.css'
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import About from './About/About';
+import Portfolio from './Portfolio/Portfolio';
 
 function App() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,8 @@ function App() {
       <Header />
         <Home />
         <Services />
-        <About scrollTop={scrollTop} />
+        <About />
+		<Portfolio />
       <Footer />
       <button
 				className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}

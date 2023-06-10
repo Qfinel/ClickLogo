@@ -44,17 +44,17 @@ const Header = () => {
 				</button>
 				<button style={(scrollTop >= 550 && scrollTop < 1200) ? linkStyle : undefined}
 					className={styles.Link}
-					onClick={() => scrollTo(680)}>
+					onClick={() => scrollTo(720)}>
 						Services
 				</button>
-				<button style={(scrollTop >= 1200 && scrollTop < 1800)  ? linkStyle : undefined}
+				<button style={(scrollTop >= 1200 && scrollTop < 2000)  ? linkStyle : undefined}
 					className={styles.Link}
-					onClick={() => scrollTo(1450)}>
+					onClick={() => scrollTo(1480)}>
 						About
 				</button>
-				<button style={(scrollTop >= 1800 && scrollTop < 2400) ? linkStyle : undefined}
+				<button style={(scrollTop >= 2000 && scrollTop < 2400) ? linkStyle : undefined}
 					className={styles.Link}
-					onClick={() => scrollTo(1800)}>
+					onClick={() => scrollTo(2380)}>
 						Portfolio
 				</button>
 				<button className={styles.ContactBtn} onClick={() => scrollTo(2400)}>Contact Us</button>
@@ -73,17 +73,17 @@ const Header = () => {
 						</button>
 						<button style={(scrollTop >= 550 && scrollTop < 1200) ? linkStyle : undefined}
 							className={styles.Link}
-							onClick={() => scrollTo(680)}>
+							onClick={() => scrollTo(720)}>
 								Services
 						</button>
-						<button style={(scrollTop >= 1200 && scrollTop < 1800) ? linkStyle : undefined}
+						<button style={(scrollTop >= 1200 && scrollTop < 2000) ? linkStyle : undefined}
 							className={styles.Link}
-							onClick={() => scrollTo(1450)}>
+							onClick={() => scrollTo(1480)}>
 								About
 						</button>
-						<button style={(scrollTop >= 1800 && scrollTop < 2400) ? linkStyle : undefined}
+						<button style={(scrollTop >= 2000 && scrollTop < 2400) ? linkStyle : undefined}
 							className={styles.Link}
-							onClick={() => scrollTo(1800)}>
+							onClick={() => scrollTo(2380)}>
 								Portfolio
 						</button>
 						<button className={styles.ContactBtn} onClick={() => scrollTo(2400)}>Contact Us</button>
