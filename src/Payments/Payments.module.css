@@ -70,10 +70,6 @@
 	transform: rotateY(180deg);
 }
 
-.PlanCard:hover p {
-	display: block;
-}
-
 .PlanCardBack {
 	position: absolute;
 	display: flex;
@@ -83,7 +79,6 @@
 	align-items: center;
 	backface-visibility: hidden;
 	transform: rotateY(180deg);
-	/* display: none; */
 }
 
 .PlanCardFront {
@@ -94,7 +89,6 @@
 	align-items: center;
 	justify-content: space-between;
 	backface-visibility: hidden;
-	/* display: none; */
 }
 
 .PlanCardBack button {

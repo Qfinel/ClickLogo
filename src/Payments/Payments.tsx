@@ -61,7 +61,6 @@ const Payments = () => {
 							Logo Design (5 Concepts)<br />
 							Sub Logo Design<br />
 							All Formats<br />
-							Alternate Logo<br />
 							Business Card Design<br />
 							Social Media Banner<br />
 							Unlimited revisions<br />
