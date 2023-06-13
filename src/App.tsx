@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import About from './About/About';
 import Portfolio from './Portfolio/Portfolio';
 import Payments from './Payments/Payments';
+import Contact from './Contact/Contact';
 
 function App() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -41,6 +42,7 @@ function App() {
         <About />
 		<Portfolio />
 		<Payments />
+		<Contact />
       <Footer />
       <button
 				className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}

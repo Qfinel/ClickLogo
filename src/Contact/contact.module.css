@@ -1,0 +1,66 @@
+.ContactContainer {
+	width: 70%;
+    padding: 0 15%;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    height: 15%;
+}
+
+.ContactContainer h1 {
+	margin-bottom: 1.8em;
+    width: 100%;
+    font-size: 3rem;
+    user-select: none;
+    box-shadow: -0.3em 0 #e43256;
+}
+
+.ContactContainer section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ContactContainer section form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 30rem;
+}
+
+.ContactContainer section form input {
+	width: 25rem;
+	height: 3rem;
+	padding: 0 5%;
+	border-radius: 15px;
+	border: 2px #451fc2 solid;
+	background-color: #7c90b310;
+	color: white;
+}
+
+.ContactContainer section form input:focus {
+	outline: none;
+}
+
+.ContactContainer section form button {
+	font-family: 'Lexend', sans-serif;
+	display: flex;
+    user-select: none;
+	align-items: center;
+	justify-content: space-evenly;
+	color: white;
+	text-decoration: none;
+	font-size: large;
+	font-weight: bold;
+	width: 8rem;
+	height: 3rem;
+    background-color: #451fc2;
+	border: 3px solid #451fc2;
+	border-radius: 50px;
+	transition: .3s;
+}
+
+.ContactContainer section form button:hover {
+	cursor: pointer;
+	background-color: transparent;
+}
