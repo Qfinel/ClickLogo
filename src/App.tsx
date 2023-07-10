@@ -1,15 +1,9 @@
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
-import Services from './Services/Services';
-import Home from './Home/Home';
-import { useState, useEffect } from 'react';
 import styles from './App.module.css'
+import { useState, useEffect } from 'react';
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import About from './About/About';
-import Portfolio from './Portfolio/Portfolio';
-import Payments from './Payments/Payments';
-import Contact from './Contact/Contact';
+import { About, Footer, Header, Payments, Portfolio, Services, Contact } from './containers';
+import { Navbar } from './components';
 
 function App() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -36,19 +30,19 @@ function App() {
 
   return (
 	<>
-      <Header />
-        <Home />
+      <Navbar />
+        <Header />
         <Services />
         <About />
 		<Portfolio />
 		<Payments />
 		<Contact />
       <Footer />
-      <button
-				className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}
-				onClick={scrollToTop}>
+		<button
+			className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}
+			onClick={scrollToTop}>
 				<FontAwesomeIcon icon={faArrowUp} color="#0e0d17"/>
-			</button>
+		</button>
 	</>
   );
 }

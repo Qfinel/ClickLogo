@@ -1,5 +1,5 @@
-import styles from './About.module.css'
-import pic2 from '../assets/Woman.jpeg'
+import styles from './about.module.css'
+import pic2 from '../../assets/Woman.jpeg'
 
 const About = () => {
 

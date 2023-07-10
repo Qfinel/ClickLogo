@@ -1,4 +1,4 @@
-import styles from './Services.module.css'
+import styles from './services.module.css'
 
 const Services = () => {
 

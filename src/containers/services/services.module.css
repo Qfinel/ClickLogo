@@ -48,7 +48,7 @@
 }
 
 .Wordmark {
-    background-image: url('../assets/Wordmark.jpg');
+    background-image: url('../../assets/Wordmark.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -61,7 +61,7 @@
 }
 
 .Letterform {
-    background-image: url('../assets/Letterform.jpg');
+    background-image: url('../../assets/Letterform.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -74,7 +74,7 @@
 }
 
 .Lettermark {
-    background-image: url('../assets/Lettermark.jpg');
+    background-image: url('../../assets/Lettermark.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -87,7 +87,7 @@
 }
 
 .LogoSymb {
-    background-image: url('../assets/LogoSymb.jpg');
+    background-image: url('../../assets/LogoSymb.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -101,7 +101,7 @@
 
 
 .AbstractLogo {
-    background-image: url('../assets/AbstractLogo.jpg');
+    background-image: url('../../assets/AbstractLogo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -115,7 +115,7 @@
 
 
 .Mascot {
-    background-image: url('../assets/Mascot.jpg');
+    background-image: url('../../assets/Mascot.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

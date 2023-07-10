@@ -1,10 +1,10 @@
-import styles from './Home.module.css'
+import styles from './header.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import pic from '../assets/Man.jpg'
+import pic from '../../assets/Man.jpg'
 
 
-const Home = () => {
+const Header = () => {
 
 
 	const scrollToBottom = () => {
@@ -37,4 +37,4 @@ const Home = () => {
 	);
 }
 
-export default Home;
+export default Header;

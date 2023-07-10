@@ -1,11 +1,11 @@
-import styles from './Header.module.css';
-import Logo from '../assets/ClickLogo.png'
+import styles from './navbar.module.css';
+import Logo from '../../assets/ClickLogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
-const Header = () => {
+const Navbar = () => {
 
 	const [openMenu, setOpenMenu] = useState<boolean>(false);
 	const [scrollTop, setScrollTop] = useState<number>(document.documentElement.scrollTop);
@@ -95,4 +95,4 @@ const Header = () => {
 	);
 }
 
-export default Header;
+export default Navbar;
