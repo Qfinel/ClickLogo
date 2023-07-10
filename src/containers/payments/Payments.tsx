@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './payments.module.css'
 import { faSnowflake, faStar, faSun } from '@fortawesome/free-regular-svg-icons';
-import { ReactComponent as PayPalIcon } from './icons/paypal.svg';
+import PayPalIcon from './icons/paypal.svg';
 
 const Payments = () => {
 

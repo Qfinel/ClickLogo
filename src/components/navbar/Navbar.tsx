@@ -3,12 +3,32 @@ import Logo from '../../assets/ClickLogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+
+type Props = {
+	onClick: () => void;
+}
+
+const Menu = (props: Props) => {
+
+	return (
+		<div className={styles.MenuCont}>
+			<FontAwesomeIcon className={styles.Xmark}
+				icon={faCircleXmark} color='#7c90b3'
+				size='2x' onClick={props.onClick}/>
+			<nav className={styles.MenuNavPanel}>
+				<a href="#home" className={styles.Link}>Home</a>
+				<a href="#services" className={styles.Link}>Services</a>
+				<a href="#about" className={styles.Link}>About</a>
+				<a href="#pricing" className={styles.Link}>Pricing</a>
+				<a href="#contact" className={styles.ContactBtn}>Contact Us</a>
+			</nav>
+		</div>
+	);
+}
 
 const Navbar = () => {
-
 	const [openMenu, setOpenMenu] = useState<boolean>(false);
-	const [scrollTop, setScrollTop] = useState<number>(document.documentElement.scrollTop);
 
 	const scrollTo = (pixels:number) => {
 		window.scrollTo({
@@ -17,81 +37,29 @@ const Navbar = () => {
 		});
 	};
 
-	const handleScroll = () => {
-		setScrollTop(document.documentElement.scrollTop);
-	}
-
-	const linkStyle = {
-		color: '#e43256',
-	}
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-		window.removeEventListener('scroll', handleScroll);
-		};
-	});
-
 	return (
-		<>
-		<header className={styles.HeaderCont}>
-			<img src={Logo} alt="Logo" className={styles.Logo} onClick={() => scrollTo(0)}/>
-			<nav className={styles.NavPanel}>
-				<button style={scrollTop < 550 ? linkStyle : undefined}
-					className={styles.Link}
-					onClick={() => scrollTo(0)}>
-						Home
-				</button>
-				<button style={(scrollTop >= 550 && scrollTop < 1200) ? linkStyle : undefined}
-					className={styles.Link}
-					onClick={() => scrollTo(720)}>
-						Services
-				</button>
-				<button style={(scrollTop >= 1200 && scrollTop < 2000)  ? linkStyle : undefined}
-					className={styles.Link}
-					onClick={() => scrollTo(1480)}>
-						About
-				</button>
-				<button style={(scrollTop >= 2500 && scrollTop < 3000) ? linkStyle : undefined}
-					className={styles.Link}
-					onClick={() => scrollTo(3200)}>
-						Pricing
-				</button>
-				<button className={styles.ContactBtn} onClick={() => scrollTo(2400)}>Contact Us</button>
+		<nav className={styles.NavContainer}>
+			<div className={styles.Logo}>
+				<img src={Logo} alt="Logo" onClick={() => scrollTo(0)}/>
+			</div>
+			<nav className={styles.NavLinks}>
+				<a href="#home" className={styles.Link}>Home</a>
+				<a href="#services" className={styles.Link}>Services</a>
+				<a href="#about" className={styles.Link}>About</a>
+				<a href="#pricing" className={styles.Link}>Pricing</a>
 			</nav>
+			<div className={styles.NavBtn}>
+				<a href="#contact" className={styles.ContactBtn} >Contact Us</a>
+			</div>
 			<div className={styles.MenuBtn}>
-				<FontAwesomeIcon icon={faBars} color='white' onClick={() => setOpenMenu(true)}/>
+				<FontAwesomeIcon style={{cursor: 'pointer'}}
+					icon={faBars} color='white'
+					onClick={() => setOpenMenu(true)}/>
 			</div>
 			{openMenu && (
-				<div className={styles.MenuCont}>
-					<FontAwesomeIcon className={styles.Xmark} icon={faCircleXmark} color='#7c90b3' size='2x' onClick={() => setOpenMenu(false)}/>
-					<nav className={styles.MenuNavPanel}>
-						<button style={scrollTop < 550 ? linkStyle : undefined}
-							className={styles.Link}
-							onClick={() => scrollTo(0)}>
-								Home
-						</button>
-						<button style={(scrollTop >= 550 && scrollTop < 1200) ? linkStyle : undefined}
-							className={styles.Link}
-							onClick={() => scrollTo(720)}>
-								Services
-						</button>
-						<button style={(scrollTop >= 1200 && scrollTop < 2000) ? linkStyle : undefined}
-							className={styles.Link}
-							onClick={() => scrollTo(1480)}>
-								About
-						</button>
-						<button style={(scrollTop >= 2500 && scrollTop < 3000) ? linkStyle : undefined}
-							className={styles.Link}
-							onClick={() => scrollTo(3200)}>
-								Pricing
-						</button>
-						<button className={styles.ContactBtn} onClick={() => scrollTo(2400)}>Contact Us</button>
-					</nav>
-				</div>
+				<Menu onClick={() => setOpenMenu(false)} />
 			)}
-		</header>
-		</>
+		</nav>
 	);
 }
 

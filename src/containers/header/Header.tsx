@@ -3,21 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import pic from '../../assets/Man.jpg'
 
-
 const Header = () => {
-
-
-	const scrollToBottom = () => {
-		window.scroll({
-			top: 3000,
-			behavior: 'smooth',
-		});
-	}
-
 	return (
-
-			<section className={styles.Section}>
-			<section className={styles.TextSection}>
+		<section className={`${styles.Container} section__padding`}>
+			<div className={styles.Text}>
 				<h1>Bringing <span style={{color: '#e43256'}}>brands</span> to life</h1>
 				<p>ClickLogo is a design company 
 				specializing in logo design, 
@@ -26,14 +15,15 @@ const Header = () => {
 				winning logo that reflects your vision. 
 				A well-designed logo can help your 
 				brand stand out from competitors.</p>
-				<button className={styles.ContactBtn} onClick={scrollToBottom}>
+				<a className={styles.ContactBtn} href='#contact'>
 					Contact Us
 					<FontAwesomeIcon icon={faArrowRight} />
-				</button>
-			</section>
-					<img src={pic} className={styles.pic} alt=""/>
-			</section>
-
+				</a>
+			</div>
+			<div className={styles.Pic}>
+				<img src={pic} alt=""/>		
+			</div>
+		</section>
 	);
 }
 

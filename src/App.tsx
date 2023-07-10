@@ -1,4 +1,4 @@
-import styles from './App.module.css'
+import styles from './app.module.css'
 import { useState, useEffect } from 'react';
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,25 +24,25 @@ function App() {
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => {
-		window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('scroll', handleScroll);
 		};
 	});
 
   return (
 	<>
-      <Navbar />
-        <Header />
-        <Services />
+      	<Navbar />
+    	<Header />
+        {/* <Services />
         <About />
 		<Portfolio />
 		<Payments />
 		<Contact />
-      <Footer />
+      	<Footer />
 		<button
 			className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}
 			onClick={scrollToTop}>
 				<FontAwesomeIcon icon={faArrowUp} color="#0e0d17"/>
-		</button>
+		</button> */}
 	</>
   );
 }

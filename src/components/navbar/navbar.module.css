@@ -1,93 +1,110 @@
-.Logo {
+.Logo img {
 	width: 80px;
 	height: 80px;
 }
 
-.Logo:hover {
+.Logo img:hover {
 	cursor: pointer;
 }
 
-.HeaderCont {
-	font-family: 'Lexend', sans-serif;
+.NavContainer {
+	width: 100%;
+	font-family: var(--font-text);
 	user-select: none;
-	padding: 0 13%;
-	top: 0;
-	width: 74%;
-	height: 6rem;
-	background-color: #0e0d17;
+	padding: 0.8rem 6rem;
+	background-color: var(--color-bg);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	box-shadow: 0 5px 5rem #2c2a4a;
+	box-shadow: 0 5px 5rem #2c2a4a8f;
 	position: fixed;
+	top: 0;
 	z-index: 1;
 }
 
-.NavPanel {
+.NavLinks {
+	flex: 1;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: flex-end;
 	align-items: center;
-	width: 50%;
 }
 
 .Link {
 	color: white;
-	text-decoration: none;
-	font-size: large;
+	font-size: 18px;
 	transition: .3s;
-	border: 0;
-	background-color: transparent;
-	font-family: 'Lexend', sans-serif;
+	cursor: pointer;
+	margin: 0 1rem;
 }
 
 .Link:hover {
-	cursor: pointer;
-	color: #e43256;
+	color: var(--color-sec);
+}
+
+.NavBtn {
+	margin-left: 1rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .ContactBtn {
-	border: 0;
-	font-family: 'Lexend', sans-serif;
+	border: 3px solid #451fc2;
 	background-color: transparent;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: white;
-	text-decoration: none;
-	font-size: large;
-	font-weight: bold;
-	width: 9rem;
-	height: 3rem;
-	border: 3px solid #451fc2;
-	border-radius: 50px;
+	font-size: 18px;
+	font-weight: 600;
+	width: 140px;
+	height: 50px;
+	border-radius: 30px;
 	transition: .3s;
-}
-
-.ContactBtn:hover {
-	background-color: #451fc2;
 	cursor: pointer;
 }
 
-
-.LinkActive {
-	color: #e43256;
+.ContactBtn:hover{
+	background-color: var(--color-prim);
 }
 
 .MenuBtn {
+	width: 80px;
+	height: 80px;
 	transform: scale(1.5);
 	display: none;
 }
 
-.MenuBtn:hover {
-	cursor: pointer;
-}
+@media screen and (max-width: 1050px) {
+    .NavLinks {
+        display: none;
+    }
 
-@media (max-width: 800px) {
 	.MenuBtn {
 		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.MenuBtn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.NavPanel {
+	.NavContainer {
+		padding: 0.8rem 4rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.NavContainer {
+		padding: 0.8rem 2rem;
+	}
+
+	.NavBtn {
 		display: none;
 	}
 }
@@ -95,7 +112,7 @@
 .MenuCont {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	width: 100vw;
 	height: 100vh;
 	background-color: #0e0d17;
@@ -107,7 +124,7 @@
 
 .Xmark {
 	position: absolute;
-	top: 2rem;
+	top: 5rem;
 	transition: .3s;
 }
 
