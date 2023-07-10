@@ -11,7 +11,7 @@
 	width: 100%;
 	font-family: var(--font-text);
 	user-select: none;
-	padding: 0.8rem 6rem;
+	padding: 0.8rem 12rem;
 	background-color: var(--color-bg);
 	display: flex;
 	align-items: center;
@@ -79,6 +79,10 @@
     .NavLinks {
         display: none;
     }
+
+	.NavContainer {
+		padding: 0.8rem 6rem;
+	}
 
 	.MenuBtn {
 		display: flex;

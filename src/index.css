@@ -28,11 +28,13 @@ a {
 }
 
 .section__padding {
-	padding: 4rem 6rem;	
+	padding: 4rem 12rem;	
 }
 
-.section__margin {
-	margin: 4rem 6rem;	
+@media screen and (max-width: 1050px) {
+	.section__padding {
+		padding: 4rem 6rem;
+	}
 }
 
 @media screen and (max-width: 700px) {
