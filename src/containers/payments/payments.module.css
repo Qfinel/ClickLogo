@@ -1,23 +1,21 @@
-.PaymentsSection {
-    width: 70%;
-    padding: 0 15%;
-    padding-top: 4%;
-    padding-bottom: 4%;
+.PaymentsContainer {
     background-color: #7c90b310;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.PaymentsSection h1 {
-	margin-top: 0;
-    margin-bottom: 2em;
-    font-size: 3rem;
+.PaymentsContainer h1 {
+	font-family: var(--font-header);
+	color: white;
+    margin-bottom: 5rem;
+    font-size: 50px;
+	line-height: 70px;
     user-select: none;
 	box-shadow: 0 0.2em #e43256;
 }
 
-.PaymentsSection section {
+.PaymentsContainer section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -25,9 +23,9 @@
 }
 
 .PlanCard {
-	background-color: #0e0d17;
-	width: 28%;
-	height: 400px;
+	background-color: var(--color-bg);
+	width: 350px;
+	height: 550px;
 	padding: 50px 0;
 	border-radius: 50px;
 	display: flex;
@@ -43,26 +41,26 @@
 	box-shadow: 0 0;
 	margin: 0;
 	width: 100%;
-	background-color: #e43256;
 	text-align: center;
 }
 
 .PlanCard h3 {
 	margin: 0;
-	font-family: 'Lexend', sans-serif;
+	font-family: var(--font-text);
 	font-weight: bold;
-	color: #7c90b3;
+	color: var(--color-text);
 	text-align: center;
 	user-select: none;
-	font-size: 1.5em;
+	font-size: 24px;
 }
 
 .PlanCard p {
+	font-family: var(--font-text);
 	text-align: center;
-	line-height: 2em;
+	line-height: 38px;
 	transition: .3s;
 	font-weight: bold;
-	color: #7c90b3;
+	color: var(--color-text);
 }
 
 .PlanCard:hover {
@@ -91,8 +89,8 @@
 	backface-visibility: hidden;
 }
 
-.PlanCardBack button {
-	font-family: 'Lexend', sans-serif;
+.PlanCardBack a {
+	font-family: var(--font-text);
 	display: flex;
 	user-select: none;
 	align-items: center;
@@ -101,15 +99,61 @@
 	text-decoration: none;
 	font-size: large;
 	font-weight: bold;
-	width: 9.5rem;
-	height: 3rem;
-	background-color: #451fc2;
-	border: 3px solid #451fc2;
+	width: 160px;
+	height: 50px;
+	background-color: var(--color-prim);
+	border: 3px solid var(--color-prim);
 	border-radius: 50px;
 	transition: .3s;
 }
 	
-.PlanCardBack button:hover {
+.PlanCardBack a:hover {
 	background-color: transparent;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+	.PaymentsContainer section {
+		flex-direction: column;
+		gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    .PaymentsContainer h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .PlanCard p {
+        font-size:  16px;
+        line-height: 36px;
+    }
+
+	.PlanCard {
+		width: 300px;
+		height: 450px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+    .PaymentsContainer h1 {
+        font-size: 26px;
+        line-height: 48px;
+    }
+
+	.PlanCard h3 {
+		font-size: 18px;
+        line-height: 34px;
+	}
+
+    .PlanCard p {
+        font-size: 14px;
+        line-height: 34px;
+    }
+
+	.PlanCard {
+		width: 270px;
+		height: 380px;
+	}
 }

@@ -13,11 +13,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
 
+interface SliderObj {
+	image: string,
+	company: string
+}
+
 const Portfolio = () => {
 
-	const [sliderData, setSliderData] = useState([{
+	const [sliderData, setSliderData] = useState<SliderObj[]>([{
 		image: pic,
-		company: 'Apple'
+		company: 'Some Firm 1'
 	},
 	{
 		image: pic2,
@@ -25,31 +30,31 @@ const Portfolio = () => {
 	},
 	{
 		image: pic3,
-		company: 'Tesla'
+		company: 'Some Firm 3'
 	},
 	{
 		image: pic4,
-		company: 'Facebook'
+		company: 'Some Firm 4'
 	},
 	{
 		image: pic5,
-		company: 'Instagram'
+		company: 'Some Firm 5'
 	},
 	{
 		image: pic6,
-		company: 'Banana'
+		company: 'Some Firm 6'
 	},
 	{
 		image: pic7,
-		company: 'Google'
+		company: 'Some Firm 7'
 	},
 	{
 		image: pic8,
-		company: 'Something'
+		company: 'Some Firm 8'
 	},
 	{
 		image: pic9,
-		company: 'Agency'
+		company: 'Some Firm 9'
 	}]);
 
 	const rotateArray = (step: number) => {
@@ -71,7 +76,7 @@ const Portfolio = () => {
 
 	return (
 		<>
-		<section className={styles.PortfolioSection}>
+		<section className={`${styles.PortfolioContainer} section__padding`}>
 			<h1>Our <span style={{color: '#e43256'}}>distinctive</span> portfolio</h1>
 			<div className={styles.PortfolioBook}>
 			<FontAwesomeIcon className={styles.Arrow} size="3x" onClick={() => {rotateArray(-1)}} icon={faArrowLeft}/>
@@ -80,7 +85,7 @@ const Portfolio = () => {
 					return null;
 				return (
 				<div
-					className={index === 2 ? `${styles.Slide} ${styles.ActiveSlide}` : styles.Slide}
+					className={index === 2 ? styles.ActiveSlide : styles.Slide}
 					key={index}
 					style={{backgroundImage: `url(${slide.image})`,}}
 					onClick={() => {rotateArray(index - 2)}}
@@ -93,7 +98,7 @@ const Portfolio = () => {
 			<FontAwesomeIcon className={styles.Arrow} size="3x" onClick={() => {rotateArray(+1)}} icon={faArrowRight}/>
 			</div>
 		</section>
-		<section className={styles.ProsSection}>
+		<section className={`${styles.ProsContainer} section__padding`}>
 			<div>
 				<FontAwesomeIcon icon={faCircleCheck} size='2x' color='#451fc2'/>
 				<p>Free consultation and brief preparation</p>

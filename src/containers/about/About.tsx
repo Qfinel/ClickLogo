@@ -5,7 +5,7 @@ const About = () => {
 
 	return (
 		<>
-		<section className={styles.QualitiesSection}>
+		<section className={`${styles.QualitiesContainer} section__padding`} id="about">
 			<h1>About <span style={{color: '#451fc2'}}>us</span></h1>
 			<p>
 				Over the years, we have worked with Fortune 500s 
@@ -19,7 +19,7 @@ const About = () => {
 			</p>
 			<img src={pic2} alt="Logo designer"></img>
 		</section>
-		<section className={styles.StatsSection}>
+		<section className={`${styles.StatsContainer} section__padding`}>
 			<div>
 				<h1>10</h1>
 				<p>YEARS OF EXPERIENCE</p>

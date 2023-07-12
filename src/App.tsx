@@ -32,7 +32,7 @@ function App() {
 	<>
       	<Navbar />
     	<Header />
-        {/* <Services />
+        <Services />
         <About />
 		<Portfolio />
 		<Payments />
@@ -42,7 +42,7 @@ function App() {
 			className={`${styles.scrollBtn} ${isVisible ? '' : styles.invisible}`}
 			onClick={scrollToTop}>
 				<FontAwesomeIcon icon={faArrowUp} color="#0e0d17"/>
-		</button> */}
+		</button>
 	</>
   );
 }

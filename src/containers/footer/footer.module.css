@@ -1,16 +1,20 @@
 .FooterCont {
-	width: 100%;
-	height: 4rem;
-	background-color: #0e0d17;
-	position: relative;
-	bottom: 0;
+	background-color: var(--color-footer);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Lexend', sans-serif;
+	font-family: var(--font-text)
 }
 
 .FooterCont h3 {
-	color: #7c90b3;
+	color: var(--color-text);
 	font-size: medium;
+}
+
+@media screen and (max-width: 550px) {
+
+	.FooterCont h3 {
+		font-size: 14px;
+	}
+
 }

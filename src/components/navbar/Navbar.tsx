@@ -5,11 +5,49 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
-type Props = {
+type MenuProps = {
 	onClick: () => void;
 }
 
-const Menu = (props: Props) => {
+type LinkProps = {
+	href: string,
+	children: React.ReactNode,
+	className: string
+}
+
+const ScrollLink = ({href, children, className}: LinkProps) => {
+	const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault()
+		const targetId = e.currentTarget.getAttribute('href')
+		const targetElement = document.querySelector(targetId || '') as HTMLElement
+	
+		if (href === '#home') {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			});
+
+			return
+		}
+		if (targetElement) {
+		  const offset = targetElement.offsetTop;
+		  const headerHeight = document.querySelector('nav')?.offsetHeight || 110 
+	
+		  window.scrollTo({
+			top: offset - headerHeight,
+			behavior: 'smooth',
+			});
+		}
+	}
+
+	return (
+		<a href={href} className={className} onClick={handleClick}>
+		  {children}
+		</a>
+	)
+}
+
+const Menu = (props: MenuProps) => {
 
 	return (
 		<div className={styles.MenuCont}>
@@ -17,11 +55,11 @@ const Menu = (props: Props) => {
 				icon={faCircleXmark} color='#7c90b3'
 				size='2x' onClick={props.onClick}/>
 			<nav className={styles.MenuNavPanel}>
-				<a href="#home" className={styles.Link}>Home</a>
-				<a href="#services" className={styles.Link}>Services</a>
-				<a href="#about" className={styles.Link}>About</a>
-				<a href="#pricing" className={styles.Link}>Pricing</a>
-				<a href="#contact" className={styles.ContactBtn}>Contact Us</a>
+				<ScrollLink href="#home" className={styles.Link}>Home</ScrollLink>
+				<ScrollLink href="#services" className={styles.Link}>Services</ScrollLink>
+				<ScrollLink href="#about" className={styles.Link}>About</ScrollLink>
+				<ScrollLink href="#pricing" className={styles.Link}>Pricing</ScrollLink>
+				<ScrollLink href="#contact" className={styles.ContactBtn}>Contact Us</ScrollLink>
 			</nav>
 		</div>
 	);
@@ -43,13 +81,13 @@ const Navbar = () => {
 				<img src={Logo} alt="Logo" onClick={() => scrollTo(0)}/>
 			</div>
 			<nav className={styles.NavLinks}>
-				<a href="#home" className={styles.Link}>Home</a>
-				<a href="#services" className={styles.Link}>Services</a>
-				<a href="#about" className={styles.Link}>About</a>
-				<a href="#pricing" className={styles.Link}>Pricing</a>
+				<ScrollLink href="#home" className={styles.Link}>Home</ScrollLink>
+				<ScrollLink href="#services" className={styles.Link}>Services</ScrollLink>
+				<ScrollLink href="#about" className={styles.Link}>About</ScrollLink>
+				<ScrollLink href="#pricing" className={styles.Link}>Pricing</ScrollLink>
 			</nav>
 			<div className={styles.NavBtn}>
-				<a href="#contact" className={styles.ContactBtn} >Contact Us</a>
+				<ScrollLink href="#contact" className={styles.ContactBtn} >Contact Us</ScrollLink>
 			</div>
 			<div className={styles.MenuBtn}>
 				<FontAwesomeIcon style={{cursor: 'pointer'}}

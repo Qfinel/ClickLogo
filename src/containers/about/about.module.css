@@ -1,67 +1,126 @@
-.QualitiesSection {
-    width: 70%;
-    margin-top: 15%;
-    padding: 0 15%;
-    padding-top: 4%;
-    padding-bottom: 2%;
-    height: 13%;
-    background-color: #7c90b310;
+.QualitiesContainer {
+    background-color: var(--color-footer);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.QualitiesSection h1 {
-    margin-top: 0;
+.QualitiesContainer h1 {
     width: 100%;
-    margin-bottom: 1em;
-    font-size: 3rem;
+    font-family: var(--font-header);
+    color: white;
+    font-size: 48px;
+    line-height: 56px;
     user-select: none;
     box-shadow: -0.3em 0 #451fc2;
 }
 
-.QualitiesSection img {
-    width: 50%;
+.QualitiesContainer img {
+    width: 45%;
     height: auto;
     border-radius: 20px;
     box-shadow: -2em 2em #451fc2;
-    transform: translateY(-18%);
+    transform: translateY(-50px);
     user-select: none;
 }
 
-.QualitiesSection p {
-    color: #7c90b3;
+.QualitiesContainer p {
+    margin: 2rem 0;
+    font-family: var(--font-text);
+    color: var(--color-text);
     font-size: large;
-    width: 36%;
-    padding-left: 4%;
-    margin-bottom: 10%;
-    line-height: 1.5em;
+    width: 45%;
+    font-size: 18px;
+    line-height: 26px;
     text-align: end;
 }
 
-.StatsSection {
+.StatsContainer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
-.StatsSection div {
+.StatsContainer div {
     display: flex;
     align-items: center;
-    width: 15%;
 }
 
-.StatsSection div h1 {
-    font-size: 4rem;
+.StatsContainer div h1 {
+    font-family: var(--font-header);
+    font-size: 56px;
     font-weight: 100;
-    margin-right: 0.2em;
-    color: #e43256;
+    margin-right: 0.6rem;
+    color: var(--color-sec);
     
 }
 
-.StatsSection div p {
-    font-size: 1.3rem;
+.StatsContainer div p {
+    font-family: var(--font-text);
+    font-size: 24px;
     font-weight: bold;
     color: white;
+}
+
+@media screen and (max-width: 1050px) {
+    .QualitiesContainer {
+        flex-direction: column;
+    }
+
+    .QualitiesContainer p {
+        text-align: center;
+        align-items: center;
+        margin: 4rem 0;
+        width: 100%;
+    }
+
+    .QualitiesContainer img {
+        margin-top: 4rem;
+        width: 80%;
+    }
+
+    .StatsContainer div h1 {
+        font-size: 42px;
+        line-height: 54px;
+    }
+
+    .StatsContainer div p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .QualitiesContainer h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .QualitiesContainer p {
+        font-size:  16px;
+        line-height: 24px;
+    }
+
+    .StatsContainer {
+        flex-direction: column;
+    }
+
+    .StatsContainer div {
+        margin: 1.5rem 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .QualitiesContainer h1 {
+        font-size: 26px;
+        line-height: 48px;
+    }
+
+    .QualitiesContainer p {
+        font-size:  14px;
+        line-height: 24px;
+        padding: 0 1rem;
+    }
+
 }

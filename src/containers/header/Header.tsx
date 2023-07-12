@@ -5,7 +5,7 @@ import pic from '../../assets/Man.jpg'
 
 const Header = () => {
 	return (
-		<section className={`${styles.Container} section__padding`}>
+		<section className={`${styles.Container} section__padding`} id="home">
 			<div className={styles.Text}>
 				<h1>Bringing <span style={{color: '#e43256'}}>brands</span> to life</h1>
 				<p>ClickLogo is a design company 

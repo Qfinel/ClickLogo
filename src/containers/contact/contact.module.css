@@ -1,66 +1,103 @@
-.ContactContainer {
-	width: 70%;
-    padding: 0 15%;
-    padding-top: 4%;
-    padding-bottom: 8%;
-    height: 15%;
-}
-
 .ContactContainer h1 {
-	margin-bottom: 1.8em;
+	font-family: var(--font-header);
+	color: white;
+	margin: 8rem 0;
     width: 100%;
     font-size: 3rem;
     user-select: none;
-    box-shadow: -0.3em 0 #e43256;
+	text-align: center;
+
 }
 
-.ContactContainer section {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.ContactContainer section form {
+.ContactContainer {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: flex-start;
-	height: 30rem;
+	align-items: center;
+	margin-bottom: 6rem;
 }
 
-.ContactContainer section form input {
-	width: 25rem;
-	height: 3rem;
-	padding: 0 5%;
+.ContactContainer form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3rem;
+}
+
+.ContactContainer form input {
+	font-family: var(--font-text);
+	width: 400px;
+	height: 60px;
+	font-size: 16px;
+    line-height: 24px;
+	padding: 0 1rem;
+	border: 0;
 	border-radius: 15px;
-	border: 2px #451fc2 solid;
 	background-color: #7c90b310;
+	border: 2px #7c90b310 solid;
 	color: white;
+	transition: .3s;
 }
 
-.ContactContainer section form input:focus {
-	outline: none;
+.ContactContainer form input:focus {
+	border: 2px white solid;
 }
 
-.ContactContainer section form button {
-	font-family: 'Lexend', sans-serif;
+.ContactContainer form button {
+	font-family: var(--font-text);
 	display: flex;
     user-select: none;
 	align-items: center;
 	justify-content: space-evenly;
 	color: white;
 	text-decoration: none;
-	font-size: large;
+	font-size: 18px;
+    line-height: 28px;
 	font-weight: bold;
-	width: 8rem;
-	height: 3rem;
-    background-color: #451fc2;
-	border: 3px solid #451fc2;
+	width: 150px;
+	height: 50px;
+    background-color: var(--color-prim);
+	border: 3px solid var(--color-prim);
 	border-radius: 50px;
 	transition: .3s;
 }
 
-.ContactContainer section form button:hover {
+.ContactContainer form button:hover {
 	cursor: pointer;
 	background-color: transparent;
+}
+
+@media screen and (max-width: 1050px) {
+    .ContactContainer h1 {
+        font-size: 42px;
+        line-height: 54px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .ContactContainer h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .ContactContainer h1 {
+        font-size: 26px;
+        line-height: 48px;
+		margin: 6rem 0;
+    }
+
+    .ContactContainer form input {
+        font-size:  14px;
+        line-height: 24px;
+		width: 320px;
+    }
+
+	.ContactContainer form button {
+        font-size:  16px;
+        line-height: 24px;
+    }
+
 }

@@ -1,26 +1,26 @@
-.PortfolioSection {
-    width: 70%;
-    padding: 0 15%;
-    padding-top: 4%;
-    padding-bottom: 8%;
-    height: 15%;
-    background-color: #7c90b310;
+.PortfolioContainer {
+    background-color: var(--color-footer);
 }
 
-.PortfolioSection h1 {
-	margin-bottom: 1.8em;
+.PortfolioContainer h1 {
+	margin-bottom: 3rem;
     width: 100%;
-    font-size: 3rem;
+	font-family: var(--font-header);
+	font-size: 48px;
+    line-height: 56px;
     user-select: none;
+	color: white;
     box-shadow: -0.3em 0 #e43256;
 }
 
 .PortfolioBook{
+	padding: 0 10%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 400px;
 	width: 100%;
+	margin-bottom: 2rem;
 }
 
 .Slide {
@@ -30,7 +30,39 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-blend-mode: color;
-	box-shadow: -0.4em 0.4em #e43256;
+	box-shadow: -10px 10px #e43256;
+	border-radius: 20px;
+	transition: .3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	cursor: pointer;
+}
+
+.Slide p {
+	opacity: 0;
+	font-size: 20px;
+	user-select: none;
+	color: white;
+	font-family: var(--font-text);
+	transform: translateY(50px);
+	transition: .3s;
+}
+
+.Slide:hover {
+	box-shadow: -15px 15px #e43256;
+}
+
+.ActiveSlide {
+	width: 300px;
+	height: 400px;
+	box-shadow: -15px 15px #e43256;
+	cursor: auto;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: color;
 	border-radius: 20px;
 	transition: .3s;
 	display: flex;
@@ -39,26 +71,18 @@
 	align-items: center;
 }
 
-.Slide p {
+.ActiveSlide p {
 	opacity: 0;
-	font-size: 1.3em;
+	font-size: 20px;
 	user-select: none;
+	color: white;
+	font-family: var(--font-text);
 	transform: translateY(50px);
 	transition: .3s;
 }
 
-.Slide:hover {
-	box-shadow: -1em 1em #e43256;
-}
-
-.ActiveSlide {
-	width: 300px;
-	height: 400px;
-	box-shadow: -0.6em 0.6em #e43256;
-}
-
 .Arrow {
-	color: #7c90b3;
+	color: var(--color-text);
 	transition: .3s;
 }
 
@@ -69,7 +93,7 @@
 
 .ActiveSlide:hover {
     background-color: rgba(0, 0, 0, 0.608);
-	box-shadow: -1.5em 1.5em #e43256;
+	box-shadow: -25px 25px #e43256;
 }
 
 .ActiveSlide:hover p {
@@ -78,24 +102,95 @@
 
 }
 
-.ProsSection {
+.ProsContainer {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 70%;
-    padding: 0 15%;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    height: 5%;
+	justify-content: space-evenly;
+	gap: 2rem;
 }
 
-.ProsSection div {
+.ProsContainer div {
 	display: flex;
 	align-items: center;
-	width: 40%;
+	flex: 1;
 }
 
-.ProsSection div p {
-	margin-left: 1.3em;
-	font-size: 1.3em;
+.ProsContainer div p {
+	font-family: var(--font-text);
+	color: white;
+	margin-left: 1rem;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+	.Slide {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    .PortfolioContainer h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .Slide p {
+        font-size:  16px;
+        line-height: 24px;
+    }
+
+    .ActiveSlide p {
+		font-size:  16px;
+        line-height: 24px;
+	}
+
+	.ActiveSlide {
+		width: 220px;
+		height: 320px;
+	}
+
+	.ProsContainer div p {
+		font-size:  16px;
+        line-height: 24px;
+	}
+
+	.ProsContainer {
+		gap: 3rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+    .PortfolioContainer h1 {
+        font-size: 26px;
+        line-height: 48px;
+    }
+
+    .Slide p {
+        font-size:  14px;
+        line-height: 24px;
+    }
+
+    .ActiveSlide p {
+		font-size:  14px;
+        line-height: 24px;
+	}
+
+	.ProsContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.ProsContainer div p {
+		font-size:  16px;
+        line-height: 24px;
+	}
+
+	.ProsContainer {
+		flex-direction: column;
+	}
+
+	.ActiveSlide {
+		width: 180px;
+		height: 280px;
+	}
 }
